@@ -1,87 +1,90 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- SEO Meta Tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRYPTIVOXE | Web Design & SEO Agency</title>
-    <meta name="description"
-        content="CRYPTIVOXE - Professional Web Design & SEO Services. We help businesses grow with stunning websites and powerful SEO strategies." />
-    <meta name="keywords"
-        content="web design, SEO services, digital agency, website development, search engine optimization" />
-    <link rel="canonical" href="https://cryptivoxe-web.vercel.app/" />
+    <meta name="description" content="CRYPTIVOXE - Professional Web Design & SEO Services. We help businesses grow with stunning websites and powerful SEO strategies.">
+    <meta name="keywords" content="web design, SEO services, digital agency, website development, search engine optimization">
+    <link rel="canonical" href="https://cryptivoxe-web.vercel.app/">
 
-    <!-- Open Graph for Social Sharing -->
-    <meta property="og:title" content="CRYPTIVOXE | Web Design & SEO Agency" />
-    <meta property="og:description"
-        content="We help businesses grow with stunning websites and powerful SEO strategies." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://cryptivoxe-web.vercel.app/" />
-    <meta property="og:image" content="https://cryptivoxe-web.vercel.app/images/logo.png" />
+    <!-- Open Graph / Twitter -->
+    <meta property="og:title" content="CRYPTIVOXE | Web Design & SEO Agency">
+    <meta property="og:description" content="We help businesses grow with stunning websites and powerful SEO strategies.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cryptivoxe-web.vercel.app/">
+    <meta property="og:image" content="https://cryptivoxe-web.vercel.app/images/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="CRYPTIVOXE | Web Design & SEO Agency" />
-    <meta name="twitter:description"
-        content="We help businesses grow with stunning websites and powerful SEO strategies." />
-    <meta name="twitter:image" content="https://cryptivoxe-web.vercel.app/images/logo.png" />
-
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "CRYPTIVOXE",
-    "url": "https://cryptivoxe-web.vercel.app/",
-    "logo": "https://cryptivoxe-web.vercel.app/images/logo.png",
-    "sameAs": [
-      "https://www.instagram.com/cryptivoxe",
-      "https://www.linkedin.com/company/cryptivoxe"
-    ]
-  }
-  </script>
-
-    <!-- Fonts & CSS -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    </noscript>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
-    <link href="/style.css" rel="stylesheet" media="print" onload="this.media='all'">
-
-
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/images/hero-img.avif" as="image" fetchpriority="high">
+    <link rel="preload" href="/style.css" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600&display=swap"
-        rel="stylesheet" media="print" onload="this.media='all'">
 
+    <!-- CSS with media print pattern -->
+    <link href="/style.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="/style.css" rel="stylesheet"></noscript>
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"></noscript>
 
-    <!-- Standard Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon_io/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600&display=swap" rel="stylesheet">
+    </noscript>
 
-
-    <link rel="preload" href="/images/hero-img.avif" as="image" fetchpriority="high">
-
-
+    <!-- Inline critical CSS -->
     <style>
-        /* Add this temporarily - will help first paint */
-        .navbar,
-        .hero-content,
-        .hero-image {
-            opacity: 1 !important;
-            animation: none !important;
+        :root {
+            --primary-color: #6c5ce7;
+            --primary-dark: #5649c0;
+            --dark-color: #1a1a2e;
+            --darker-color: #16213e;
+            --light-color: #f1f1f1;
         }
-
         body {
             font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--dark-color);
+            color: var(--light-color);
+            margin: 0;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(26, 26, 46, 0.9);
+            z-index: 1000;
+        }
+        .hero {
+            padding-top: 80px;
+            min-height: 100vh;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
         }
     </style>
 
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon_io/favicon.ico">
+    <link rel="apple-touch-icon" href="/favicon_io/apple-touch-icon.png">
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "CRYPTIVOXE",
+        "url": "https://cryptivoxe-web.vercel.app/",
+        "logo": "https://cryptivoxe-web.vercel.app/images/logo.png",
+        "sameAs": [
+            "https://www.instagram.com/cryptivoxe",
+            "https://www.linkedin.com/company/cryptivoxe"
+        ]
+    }
+    </script>
 </head>
 
 
@@ -424,8 +427,8 @@
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js" defer></script>
     <script src="/script.js" defer></script>
     <script>
         window.addEventListener('load', () => {
