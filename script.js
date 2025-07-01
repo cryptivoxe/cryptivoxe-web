@@ -258,20 +258,6 @@ document.addEventListener('DOMContentLoaded', function () {
         ease: 'power2.out'
     });
 
-    // Form submission
-    const contactForm = document.querySelector('.contact-form');
-
-    if (contactForm) {
-        contactForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-
-            // Here you would typically send the form data to a server
-            // For demonstration, we'll just show an alert
-            alert('Thank you for your message! We will get back to you soon.');
-            this.reset();
-        });
-    }
-
     // Newsletter form
     const newsletterForm = document.querySelector('.footer-newsletter form');
 
