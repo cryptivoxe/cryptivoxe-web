@@ -45,19 +45,42 @@
   </script>
 
     <!-- Fonts & CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </noscript>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
+    <link href="/style.css" rel="stylesheet" media="print" onload="this.media='all'">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600&display=swap"
-        rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
-    <link href="/style.css" rel="stylesheet" />
+        rel="stylesheet" media="print" onload="this.media='all'">
 
 
     <!-- Standard Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon_io/favicon.ico">
 
-    <!-- Apple Touch Icon (For iPhones/iPads) -->
-    <link rel="apple-touch-icon" href="/favicon_io/apple-touch-icon.png">
+
+    <link rel="preload" href="/images/hero-img.avif" as="image" fetchpriority="high">
+
+
+    <style>
+        /* Add this temporarily - will help first paint */
+        .navbar,
+        .hero-content,
+        .hero-image {
+            opacity: 1 !important;
+            animation: none !important;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+    </style>
 
 </head>
 
@@ -115,9 +138,8 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="/images/hero-img.avif"
-                    alt="Web design and development concept" class="animate__animated animate__fadeInRight"
-                    loading="lazy">
+                <img src="/images/hero-img.avif" alt="Web design concept" width="1200" height="800" loading="eager"
+                    fetchpriority="high">
             </div>
         </div>
     </section>
@@ -288,8 +310,8 @@
                 </div>
             </div>
             <div class="about-image">
-                <img src="/images/about-img.avif"
-                    alt="CRYPTIVOXE team working together" class="team-photo" loading="lazy">
+                <img src="/images/about-img.avif" alt="CRYPTIVOXE team working together" class="team-photo"
+                    loading="lazy">
             </div>
         </div>
     </section>
