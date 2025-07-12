@@ -27,26 +27,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- CSS with media print pattern -->
-    <link href="/style.css" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript>
-        <link href="/style.css" rel="stylesheet">
-    </noscript>
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"
-        media="print" onload="this.media='all'">
-    <noscript>
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    </noscript>
+    <!-- ✅ Fix: Directly loading local CSS -->
+    <link href="style.css" rel="stylesheet" />
 
+    <!-- ✅ Fix: Font Awesome without print -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+
+    <!-- ✅ Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600&display=swap"
-        rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600&display=swap"
-            rel="stylesheet">
-    </noscript>
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <!-- Inline critical CSS -->
     <style>
@@ -122,8 +116,13 @@
                     <li class="dropdown">
                         <a href="#services" class="nav-link">Services <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown-menu">
-                            <li><a href="/services/web-development.html" class="dropdown-item">Web Design</a></li>
+                            <li><a href="/services/web-service.html" class="dropdown-item">Static Web Essentials</a>
+                            </li>
                             <li><a href="/services/seo-services.html" class="dropdown-item">SEO Services</a></li>
+                            <li><a href="/services/development-service.html" class="dropdown-item">Dynamic Web Solutions</a>
+                            </li>
+                            <li><a href="/services/ai-service.html" class="dropdown-item">AI & Workflow
+                                    Automation</a></li>
                             <li><a href="/services/ui-ux-design.html" class="dropdown-item">UI/UX Design</a></li>
                             <li><a href="/services/digital-marketing.html" class="dropdown-item">Digital Marketing</a>
                             </li>
@@ -146,23 +145,35 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
-                <h1 class="animate__animated animate__fadeInUp">Elevate Your Digital Presence</h1>
-                <p class="animate__animated animate__fadeInUp animate__delay-1s">We craft stunning websites and powerful
-                    SEO strategies to help your business thrive in the digital world.</p>
+                <div class="mobile-spacer"></div>
+                <h1 class="hero-title animate__animated animate__fadeIn animate__delay-1s">
+                    We Don’t Just Build Websites — <br />
+                    <span style="color: var(--primary-color);">We Build Online Momentum</span>
+                </h1>
+                <p class="animate__animated animate__fadeIn animate__delay-2s">
+                    At Cryptivoxe, we turn digital presence into growth engines —
+                    <strong>clean UI</strong>, <strong>blazing speed</strong>, and
+                    <strong>SEO that ranks & converts</strong>.
+                </p>
                 <div class="hero-buttons animate__animated animate__fadeInUp animate__delay-2s">
-                    <a href="#services" class="btn btn-primary">Our Services</a>
-                    <a href="#contact" class="btn btn-outline">Contact Us</a>
+                    <a href="#services" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i> Get Started
+                    </a>
+                    <a href="#portfolio" class="btn btn-outline">
+                        <i class="fas fa-eye"></i> See Our Work
+                    </a>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="/images/hero-img.avif" alt="Web design concept" width="1200" height="800" loading="eager"
-                    fetchpriority="high">
+
+            <div class="hero-image animate__animated animate__fadeInUp animate__delay-3s">
+                <img src="/images/hero-img.avif" alt="Web Design Agency" class="hero-img" />
             </div>
         </div>
     </section>
+
 
     <!-- Services Section -->
     <section id="services" class="services">
@@ -173,10 +184,10 @@
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-code"></i>
+                        <i class="fa-solid fa-code"></i>
                     </div>
-                    <h3>Web Design</h3>
-                    <p>Custom, responsive websites that captivate your audience and drive conversions.</p>
+                    <h3>Static Web Essentials</h3>
+                    <p>Fast, static websites and landing pages built for speed, clarity, and conversion.</p>
                     <a href="/services/web-development.html" class="service-link">Learn More About Service <i
                             class="fas fa-arrow-right"></i></a>
                 </div>
@@ -188,6 +199,27 @@
                     <h3>SEO Services</h3>
                     <p>Boost your search rankings and organic traffic with our proven SEO strategies.</p>
                     <a href="/services/seo-services.html" class="service-link">Learn More About Service <i
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <h3>Dynamic Web Solutions</h3>
+                    <p>Dynamic websites using Shopify, WordPress, or Full Stack tech for scalable online growth.</p>
+                    <a href="/services/web-development.html" class="service-link">Learn More About Service <i
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <h3>AI & Workflow Automation</h3>
+                    <p>Smart automations built using Zapier, Make, n8n, Lindy & more to save you time and scale faster.
+                    </p>
+                    <a href="/services/web-development.html" class="service-link">Learn More About Service <i
                             class="fas fa-arrow-right"></i></a>
                 </div>
 
@@ -223,8 +255,10 @@
 
             <div class="portfolio-filters">
                 <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="web">Web Design</button>
+                <button class="filter-btn" data-filter="web">Static Web Essentials</button>
                 <button class="filter-btn" data-filter="seo">SEO Services</button>
+                <button class="filter-btn" data-filter="development">Dynamic Web Solutions</button>
+                <button class="filter-btn" data-filter="automation">AI & Workflow Automation</button>
                 <button class="filter-btn" data-filter="uiux">UI/UX Design</button>
                 <button class="filter-btn" data-filter="marketing">Digital Marketing</button>
             </div>
@@ -235,17 +269,29 @@
                     <img alt="Project 1" src="/images/projects/xim-university-web.avif" />
                     <div class="portfolio-overlay">
                         <h3>XIM University Website</h3>
-                        <p>Web Design</p>
+                        <p>Static Web Essentials</p>
                         <a class="btn btn-outline" href="https://web-styledown-event.onrender.com/" target="_blank">View
                             Website</a>
                     </div>
                 </div>
 
+
+                <div class="portfolio-item" data-category="development">
+                    <img alt="Project 1" src="/images/projects/BiteNest.avif" />
+                    <div class="portfolio-overlay">
+                        <h3>BiteNest - Shopify</h3>
+                        <p>Dynamic Web Solutions</p>
+                        <button class="btn btn-outline video-btn"
+                            data-video="/sample-work-videos/BiteNest - Shopify.mp4">View Demo</button>
+                    </div>
+                </div>
+
+
                 <div class="portfolio-item" data-category="web">
                     <img alt="Project 1" src="/images/projects/Innovertex 2.0.avif" />
                     <div class="portfolio-overlay">
                         <h3>DUV International School Website</h3>
-                        <p>Web Design</p>
+                        <p>Static Web Essentials</p>
                         <a class="btn btn-outline" href="https://innovortex-reimagathon-project-duv.onrender.com/"
                             target="_blank">View Website</a>
                     </div>
@@ -262,14 +308,14 @@
                     </div>
                 </div>
 
-                <div class="portfolio-item" data-category="uiux">
-                    <img alt="AlertaX App UI/UX" src="/images/projects/alertaxuiux.avif" />
+
+                <div class="portfolio-item" data-category="development">
+                    <img alt="Project 1" src="/images/projects/ThreadRush.avif" />
                     <div class="portfolio-overlay">
-                        <h3>AlertaX Website Design</h3>
-                        <p>UI/UX Design</p>
-                        <a class="btn btn-outline"
-                            href="https://www.figma.com/design/g9XSPaIxNUO2lhO4miUs5q/AlertaX?node-id=0-1&t=0uD0McTedkb0racZ-1"
-                            target="_blank">View on Figma</a>
+                        <h3>ThreadRush - Shopify</h3>
+                        <p>Dynamic Web Solutions</p>
+                        <button class="btn btn-outline video-btn"
+                            data-video="/sample-work-videos/ThreadRush- Shopify.mp4">View Demo</button>
                     </div>
                 </div>
 
@@ -305,7 +351,7 @@
 
 
                 <div class="portfolio-item" data-category="uiux">
-                    <img alt="Mobile App Redesign" src="/images/projects/coffee.PNG" />
+                    <img alt="Mobile App Redesign" src="/images/projects/coffee.avif" />
                     <div class="portfolio-overlay">
                         <h3>Coffee App Redesign</h3>
                         <p>UI/UX Design</p>
@@ -320,7 +366,7 @@
                     <img alt="Project 1" src="/images/projects/fastnease.avif" />
                     <div class="portfolio-overlay">
                         <h3>fastnease Website</h3>
-                        <p>Web Design</p>
+                        <p>Static Web Essentials</p>
                         <a class="btn btn-outline" href="https://pixel-to-pitch-project.onrender.com/"
                             target="_blank">View Website</a>
                     </div>
@@ -356,6 +402,93 @@
             <div class="about-image">
                 <img src="/images/about-img.avif" alt="CRYPTIVOXE team working together" class="team-photo"
                     loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission Section -->
+    <section id="vision" class="vision-mission">
+        <div class="container">
+            <h2 class="section-title">Our <span>Vision & Mission</span></h2>
+            <p class="section-subtitle">Driving digital transformation with purpose and passion</p>
+
+            <div class="vision-mission-grid">
+                <div class="vision-card tech-box">
+                    <div class="hexagon-bg">
+                        <div class="vision-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                    </div>
+                    <h2>Our Vision</h2>
+                    <<h3 class="section-subtitle" style="text-align: center;">
+                        🚀 Empowering innovation through smart web solutions and data-driven growth.
+                        </h3>
+
+                        <div class="circuit-lines"></div>
+                </div>
+
+                <div class="tech-divider">
+                    <div class="chip-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <div class="binary-code">101010</div>
+                </div>
+
+                <div class="mission-card tech-box">
+                    <div class="hexagon-bg">
+                        <div class="mission-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                    </div>
+                    <h2>Our Mission</h2>
+                    <ul
+                        style="list-style: none; padding: 0; text-align: center; display: flex; flex-direction: column; gap: 15px; font-size: 1.1rem;">
+                        <li><i class="fas fa-bullseye" style="color: var(--primary-color); margin-right: 10px;"></i>
+                            Deliver custom digital experiences that fuel growth</li>
+                        <li><i class="fas fa-chart-line" style="color: var(--primary-color); margin-right: 10px;"></i>
+                            Strengthen online presence with measurable impact</li>
+                        <li><i class="fas fa-handshake" style="color: var(--primary-color); margin-right: 10px;"></i>
+                            Build lasting partnerships based on trust & clarity</li>
+                    </ul>
+
+                    <div class="circuit-lines"></div>
+                </div>
+            </div>
+
+            <div class="core-values">
+                <h4>Our Core Values</h4>
+                <div class="values-grid">
+                    <div class="value-item">
+                        <div class="tech-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <span>Innovation</span>
+                    </div>
+                    <div class="value-item">
+                        <div class="tech-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <span>Integrity</span>
+                    </div>
+                    <div class="value-item">
+                        <div class="tech-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <span>Excellence</span>
+                    </div>
+                    <div class="value-item">
+                        <div class="tech-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <span>Passion</span>
+                    </div>
+                    <div class="value-item">
+                        <div class="tech-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <span>Collaboration</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -420,10 +553,10 @@
                     <p>Your partner in digital success. We create websites that perform and SEO strategies that deliver.
                     </p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <!-- <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a> -->
                         <a href="https://www.linkedin.com/company/cryptivoxe/"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/cryptivoxe/"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
 
@@ -441,8 +574,10 @@
                 <div class="footer-links">
                     <h3>Services</h3>
                     <ul>
-                        <li><a href="/services/web-development.html">Web Design</a></li>
+                        <li><a href="/services/web-development.html">Static Web Essentials</a></li>
                         <li><a href="/services/seo-services.html">SEO Services</a></li>
+                        <li><a href="/services/digital-marketing.html">Dynamic Web Solutions</a></li>
+                        <li><a href="/services/digital-marketing.html">AI & Workflow Automation</a></li>
                         <li><a href="/services/ui-ux-design.html">UI/UX Design</a></li>
                         <li><a href="/services/digital-marketing.html">Digital Marketing</a></li>
                     </ul>
@@ -467,6 +602,17 @@
             </div>
         </div>
     </footer>
+
+
+    <!-- Video Model -->
+    <div class="video-modal" id="videoModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <video controls id="portfolioVideo">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js" defer></script>
